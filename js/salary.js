@@ -1,5 +1,5 @@
 const empleado = {
-    bruto: 50000,
+    bruto: 11500,
     hijos: 2,
     pagas: 14
 }

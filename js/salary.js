@@ -21,7 +21,13 @@ function getRetention(empleado) {
     return retention * empleado.bruto;
 }
 
-var netSalary = empleado.bruto - getRetention(empleado);
+function netAnnualSalary(empleado) {
+    return empleado.bruto - getRetention(empleado);
+}
 
-console.log("Neto anual en nómina: ", netSalary);
-console.log("Neto mensual en nómina: ", netSalary / empleado.pagas);
+function netMonthlySalary(empleado) {
+    return netAnnualSalary(empleado) / empleado.pagas;
+}
+
+console.log("Neto anual en nómina: ", netAnnualSalary(empleado));
+console.log("Neto mensual en nómina: ", netMonthlySalary(empleado));
